@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style type="text/css">
+		.container{
+			margin-top: 8%;
+			width: 400px;
+			border: ridge 1.5px white;
+			padding: 20px;
+		}
+		body{
+			background: #2c73f8;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #dcdf35, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+		}
+	</style>
+</head>
+<body>
+	<div>
+	
+	</div>
+	<div class="container">
+		<h2>Registration Form</h2>
+	<form  method="POST">{% csrf_token %}
+    <div class="form-group">
+      <label for="username">User Name</label>
+      {{ form.username }}
+    </div>
+		<div class="form-group">
+    <label for="firstname">First Name</label>
+    {{ form.Firstname }}
+  </div>
+  <div class="form-group">
+    <label for="lastname">Last Name</label>
+    {{ form.Lastname }}
+  </div>
+  <div class="form-group">
+    <label for="phoneno">Phone Number</label>
+    {{ form.Phone }}
+  </div>
+  <div class="form-group">
+    <label for="Email1">Email address</label>
+    {{ form.Email }}
+  </div>
+  <div class="form-group">
+    <label for="Password">Password</label>
+    {{ form.password1 }}
+  </div>
+  <div class="form-group">
+    <label for="Password">Confirm Password</label>
+    {{ form.password2 }}
+  </div>
+  <button type="submit" class="btn btn-primary" name="create">Sign up</button>
+</form>
+</div>
+</body>
+</html>
